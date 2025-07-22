@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #212A31 0%, #2E3944 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(211, 217, 212, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #212A31;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #124E66, #748D92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.form-container {
+    background: linear-gradient(135deg, #124E66 0%, #2E3944 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(18, 78, 102, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #D3D9D4;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(211, 217, 212, 0.9);
+    transition: all 0.3s ease;
+    outline: none;
+    color: #212A31;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    background: #D3D9D4;
+    box-shadow: 0 0 15px rgba(211, 217, 212, 0.5);
+    transform: translateY(-2px);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #748D92 0%, #124E66 100%);
+    color: #D3D9D4;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(116, 141, 146, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(116, 141, 146, 0.6);
+    background: linear-gradient(135deg, #124E66 0%, #2E3944 100%);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(33, 42, 49, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(135deg, #212A31 0%, #124E66 100%);
+    color: #D3D9D4;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(116, 141, 146, 0.2);
+    transition: background-color 0.3s ease;
+    color: #212A31;
+}
+
+tr:hover {
+    background-color: rgba(211, 217, 212, 0.3);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.status.active {
+    background: linear-gradient(135deg, #748D92 0%, #124E66 100%);
+    color: #D3D9D4;
+}
+
+.status.inactive {
+    background: linear-gradient(135deg, #2E3944 0%, #212A31 100%);
+    color: #D3D9D4;
+}
+
+.toggle-btn {
+    background: linear-gradient(135deg, #124E66 0%, #748D92 100%);
+    color: #D3D9D4;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(18, 78, 102, 0.3);
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(18, 78, 102, 0.4);
+    background: linear-gradient(135deg, #2E3944 0%, #212A31 100%);
+}
+
+.toggle-btn:active {
+    transform: translateY(0);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #748D92;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+tr {
+    animation: fadeIn 0.5s ease;
+}
